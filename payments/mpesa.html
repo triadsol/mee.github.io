@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M-Pesa Payment Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    .container {
+        position: relative;
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    input[type="text"], input[type="tel"], input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 50%;
+        background-color: #ccc;
+    }
+     input[type="submit"] {
+        background-color:#4CAF50 ; /* New button color */
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <span class="close" onclick="goToCartPage()">&times;</span>
+    <h2>M-Pesa Payment</h2>
+    <form action="mpesa_payment_process.php" method="post">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+        
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" name="amount" placeholder="Enter the amount to pay" required>
+
+        <!--<label for="pin">Enter Mpesa pin:</label>
+        <input type="text" id="pin" name="pin" placeholder="Enter your M-pesa pin" required>-->
+        
+        <input type="submit" value="Pay with M-Pesa">
+    </form>
+</div>
+
+<script>
+function goToCartPage() {
+    window.location.href = "cart.html";
+}
+</script>
+
+</body>
+</html>
